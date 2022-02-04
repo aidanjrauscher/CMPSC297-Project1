@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 
-function SH256(message){
+function SHA256(message){
 
     return crypto
         .createHash("sha256")
@@ -11,11 +11,11 @@ function SH256(message){
 
 class Block{
 
-    constructor(prevHash="", transaction=[]){
+    constructor(prevHash="", transactions=[]){
         
         this.timestamp = Date.now();
 
-        this.transaction = transactions;
+        this.transactions = transactions;
 
         this.hash = this.getHash();
 
@@ -29,14 +29,14 @@ class Block{
 
     getHash(){
 
-        let txtStr = "";
+        let txtString = "";
     
         for(let i=0; i<this.transactions.length; i++){
-            txtStr += JSON.stringify(this.transactions[i]);
+            txtString += JSON.stringify(this.transactions[i]);
         }
     
         return SHA256(
-            this.prevHash + this.timeStamp + txtStr + this.nonce
+            this.prevHash + this.timeStamp + txtString + this.nonce
         );
     }
 

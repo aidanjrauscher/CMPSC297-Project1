@@ -15,7 +15,7 @@ class Blockchain{
     }
 
     addBlock(){
-        let newBlocok = new Block(this.getLastBlock().hash, global.transactions);
+        let newBlock = new Block(this.getLastBlock().hash, global.transactions);
     
         this.chain.push(Object.freeze(newBlock));
     }
