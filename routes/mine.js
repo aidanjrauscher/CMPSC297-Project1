@@ -1,3 +1,4 @@
+//mine a new block
 function mine(app){
     app.get("/mine", (request, response)=>{
         global.blockchain.addBlock();

@@ -1,3 +1,4 @@
+//display current state of the blockchain 
 function chain(app){
     app.get("/chain", (request, response)=>{
         let chainString = global.blockchain.prettify();

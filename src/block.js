@@ -1,5 +1,6 @@
 const crypto = require("crypto");
 
+//hashing method used for PoW
 function SHA256(message){
 
     return crypto
@@ -9,6 +10,7 @@ function SHA256(message){
 }
 
 
+//define the block class
 class Block{
 
     constructor(prevHash="", transactions=[]){
@@ -27,6 +29,7 @@ class Block{
     }
 
 
+    //generate hash for current block
     getHash(){
 
         let txtString = "";
@@ -41,6 +44,7 @@ class Block{
     }
 
 
+    //mine a new block
     mine(){
         let checkString = Array(global.difficulty +1).join("0");
 

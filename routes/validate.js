@@ -1,3 +1,4 @@
+//check if the blockchain is valid in its current state
 function validate(app){
     app.get("/validate", (request, response)=>{
         let isValid = global.blockchain.isChainValid();

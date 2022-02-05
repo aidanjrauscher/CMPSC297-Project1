@@ -1,5 +1,6 @@
 const Transaction = require("../src/transaction");
 
+//display transaction history of the blockchain
 function listtransactions(app){
     app.get("/listtransactions", (request, response)=>{
         

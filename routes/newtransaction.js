@@ -1,5 +1,6 @@
 const Transaction = require("../src/transaction");
 
+//perform a new transaction between two random addresses
 function newtransaction(app){
     app.get("/newtransaction", (request, response)=>{
         let transaction = new Transaction();

@@ -1,3 +1,4 @@
+//set a baseline to make sure server works 
 function brew(app) {
     // (Attempt) to get some coffee
     app.get("/", function (request, response) {

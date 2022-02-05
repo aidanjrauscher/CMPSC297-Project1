@@ -1,7 +1,7 @@
+//generate a random 'IP' string
 function generateRandomIPv4(){
 
     let ipv4 = "";
-
 
     ipv4 += Math.floor(Math.random()*255)+1;
     ipv4 += ".";
@@ -14,11 +14,12 @@ function generateRandomIPv4(){
     return ipv4;    
 }
 
+//generate a random amount of 'money' capped at 1MM
 function generateRandomMoney(){
     return Math.floor(Math.random()*1000000);
 }
 
-
+//define the transaction class
 class Transaction{
 
     constructor(sendAddress="", recieveAddress="", amount=0){
